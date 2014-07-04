@@ -12,7 +12,7 @@ public class HexUtil {
 			hexStr.insert(0, '0');
 		}
 		
-		return hexStr.toString();
+		return hexStr.substring(hexStr.length() - 2);
 	}
 
 	public static String toHexString(short val) {
@@ -22,7 +22,7 @@ public class HexUtil {
 			hexStr.insert(0, '0');
 		}
 		
-		return hexStr.toString();
+		return hexStr.substring(hexStr.length() - 4);
 	}
 
 	public static String toHexString(int val) {
