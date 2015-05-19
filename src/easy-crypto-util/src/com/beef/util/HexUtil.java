@@ -78,6 +78,15 @@ public class HexUtil {
 		return hexStr.toString();
 	}
 	
+	public static byte[] parseHexString(String hexStr) {
+		int byteLen = hexStr.length() / 2;
+		byte[] buffer = new byte[byteLen];
+		
+		parseHexString(hexStr, buffer, 0);
+		
+		return buffer;
+	}
+	
 	public static void parseHexString(String hexStr, byte[] destBuff, int offset) {
 		int byteLen = hexStr.length() / 2;
 		int beginIndex = 0;
