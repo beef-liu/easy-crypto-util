@@ -88,9 +88,9 @@ public class HexUtil {
 	}
 	
 	public static void parseHexString(String hexStr, byte[] destBuff, int offset) {
-		int byteLen = hexStr.length() / 2;
+		int byteMax = offset + hexStr.length() / 2;
 		int beginIndex = 0;
-		for(int i = offset; i < byteLen; i++) {
+		for(int i = offset; i < byteMax; i++) {
 			destBuff[i] = (byte)(
 					hexCharToByte(hexStr.charAt(beginIndex + 1)) 
 					| ((hexCharToByte(hexStr.charAt(beginIndex)) << 4) & 0xf0)
